@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head %}
+    detail || {{block.super}}
+{% endblock %}
+
+{% block content %}
+    <h1>
+        {{object.name}}
+        <small>{{object.locat}}</small>
+    </h1>
+    <p>
+        {{object.category}}  {{object.addTime}}  {{object.upTime}}
+    </p>
+
+    <p>
+        <a href="/rest" >back</a>   |  <a href="/remove/{{object.slug}}" >remove</a> | <a href="/edit/{{object.slug}}" >edit</a>
+    </p>
+
+
+
+{% endblock %}

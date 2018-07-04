@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <div class="head">
+        <title>
+
+            {% block head %} saghar {% endblock %}
+
+        </title>
+    </div>
+</head>
+
+<body>
+    
+    <div class="container"> 
+
+        <h1>
+            helllllooo!!!!
+        </h1>
+        <a href="/welcome"> welcome</a>
+        <a href="/hello" >hello</a>
+        <a href="/rest" >rest</a>
+        <a href="/bye" >Bye</a>
+        {% include "snippets/css.html" %}
+
+            {% block content %}
+            {% endblock content %}
+	</div>	
+
+	{% include "snippets/js.html" %}
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block head %}
+    rest || {{block.super}}
+{% endblock %}
+
+{% block content %}
+
+    <ul>
+        {% for i in object_list  %}
+            <li>
+                <h1><a href="/detail/{{i.name}}"> <small> {{i.name}} </small> </a> </h1>
+                <p> {{i.locat}} {{i.category}} {{i.addTime}} {{i.upTime}} </p>
+            </li>          
+        {% endfor %}
+
+        <a href="/rest/create" ><P>new rest</P></a>
+    </ul>
+{% endblock %}
